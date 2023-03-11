@@ -39,7 +39,7 @@ DJANGO_APPS = [
     "django.contrib.staticfiles",
 ]
 
-THIRD_PARTY_APP = ["rest_framework", "djmoney"]
+THIRD_PARTY_APP = ["rest_framework"]
 
 MY_APPS = ["accounts", "transactions", "persons"]
 
@@ -116,7 +116,9 @@ AUTH_PASSWORD_VALIDATORS = [
 
 LANGUAGE_CODE = "en-us"
 
-TIME_ZONE = "UTC"
+TIME_ZONE = "America/Sao_Paulo"
+
+DATE_FORMAT = "d/m/Y"
 
 USE_I18N = True
 
