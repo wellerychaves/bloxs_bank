@@ -30,17 +30,20 @@ ALLOWED_HOSTS = []
 
 # Application definition
 
-INSTALLED_APPS = [
+DJANGO_APPS = [
     "django.contrib.admin",
     "django.contrib.auth",
     "django.contrib.contenttypes",
     "django.contrib.sessions",
     "django.contrib.messages",
     "django.contrib.staticfiles",
-    "accounts",
-    "transactions",
-    "persons",
 ]
+
+THIRD_PARTY_APP = ["rest_framework"]
+
+MY_APPS = ["accounts", "transactions", "persons"]
+
+INSTALLED_APPS = DJANGO_APPS + THIRD_PARTY_APP + MY_APPS
 
 MIDDLEWARE = [
     "django.middleware.security.SecurityMiddleware",
@@ -113,7 +116,9 @@ AUTH_PASSWORD_VALIDATORS = [
 
 LANGUAGE_CODE = "en-us"
 
-TIME_ZONE = "UTC"
+TIME_ZONE = "America/Sao_Paulo"
+
+DATE_FORMAT = "d/m/Y"
 
 USE_I18N = True
 
